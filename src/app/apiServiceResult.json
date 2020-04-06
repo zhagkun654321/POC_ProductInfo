@@ -1,0 +1,534 @@
+// snaplogic.url=https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging
+//(1) search product on product info
+// https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging/GEWater/GEWater_SPG/Product_Info_Plastics_Task?generic_number=25881
+
+[
+    {
+        "Plastics": {
+            "label": "Plastics",
+            "particles": [
+                {
+                    "Id": null,
+                    "Name": "Gylon",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "HDCL",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Halar",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Kynar",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Nylon",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "PVC(Type 1)",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Polyethyl.HD",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Polyethyl.LD",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Polypropylene",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Polysulfone",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "TYGON",
+                    "Rating": "A"
+                },
+                {
+                    "Id": null,
+                    "Name": "Teflon",
+                    "Rating": "A"
+                }
+            ]
+        }
+    }
+]
+
+//(2)Corrosion web service
+//https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging//GEWater/GEWater_SPG/Product_Info_Corrosion_Task?generic_number=25881
+
+var corrosionResult = [
+    {
+        "corrosion": {
+            "label": "Corrosion",
+            "particles": [
+                {
+                    "Id": null,
+                    "Name": "304SS",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "316SS",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "AL",
+                    "Rating": "D"
+                },
+                {
+                    "Id": null,
+                    "Name": "CU",
+                    "Rating": "C"
+                },
+                {
+                    "Id": null,
+                    "Name": "LB",
+                    "Rating": "C"
+                },
+                {
+                    "Id": null,
+                    "Name": "LCS (low carbon steel)",
+                    "Rating": "B"
+                }
+            ]
+        }
+    }
+]
+
+//(3)Elastomer web service
+//https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging/GEWater/GEWater_SPG/Product_Info_Elastomers_Task?generic_number=25881
+
+var elastomerResult = [
+    {
+        "Elastomer": {
+            "label": "Elastomer",
+            "particles": [
+                {
+                    "Id": null,
+                    "Name": "Buna N",
+                    "Rating": "C"
+                },
+                {
+                    "Id": null,
+                    "Name": "Buna S",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Butyl Lining",
+                    "Rating": "A"
+                },
+                {
+                    "Id": null,
+                    "Name": "Chlorobutyl",
+                    "Rating": "A"
+                },
+                {
+                    "Id": null,
+                    "Name": "EPR/EPDM",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Hypalon",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Kalrez",
+                    "Rating": "A"
+                },
+                {
+                    "Id": null,
+                    "Name": "Natural Rubber",
+                    "Rating": "A"
+                },
+                {
+                    "Id": null,
+                    "Name": "Neoprene",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "POLYSULFIDE",
+                    "Rating": "B"
+                },
+                {
+                    "Id": null,
+                    "Name": "Urethane",
+                    "Rating": "X"
+                },
+                {
+                    "Id": null,
+                    "Name": "Viton A",
+                    "Rating": "A"
+                },
+                {
+                    "Id": null,
+                    "Name": "Viton Lithurge",
+                    "Rating": "A"
+                }
+            ]
+        }
+    }
+]
+
+
+
+//(4)Containers web service
+// this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Container_Price_Task?matkl="+genericno+"&salesOrg="+salesOrg; 
+
+
+
+
+
+//(5)Physical Properties web service
+// this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Physprop_Task?generic_number=" + genericno;
+
+var physicalResult = [
+    {
+        "NAME": "Boiling Point (ºC)",
+        "VALUE": "104"
+    },
+    {
+        "NAME": "Fire Point (ºC)",
+        "VALUE": "> 537"
+    },
+    {
+        "NAME": "Flash Point (ºC)",
+        "VALUE": "> 101"
+    },
+    {
+        "NAME": "Freeze Point (ºC)",
+        "VALUE": "-7.8"
+    },
+    {
+        "NAME": "Initial Crystallization Point (ºC)",
+        "VALUE": "0"
+    },
+    {
+        "NAME": "Pour Point (ºC)",
+        "VALUE": "-5"
+    },
+    {
+        "NAME": "Shelf Life (Days)",
+        "VALUE": "720"
+    },
+    {
+        "NAME": "Viscosity RVT @ 21 ºC (cP)",
+        "VALUE": "54"
+    },
+    {
+        "NAME": "Viscosity RVT @ 4 ºC (cP)",
+        "VALUE": "79"
+    }
+]
+
+//(6)Regulatory web service
+//https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging/GEWater/GEWater_SPG/Product_Info_Regulatory_Task?generic_number=25881
+
+var regulatoryResult = [
+    {
+        "regulatory": {
+            "label": "Regulatory",
+            "particles": [
+                {
+                    "Name": "TOC (mg C/g)",
+                    "Rating": 83
+                },
+                {
+                    "Name": "COD (mg O2/g)",
+                    "Rating": 274
+                },
+                {
+                    "Name": "BOD-5 (mg O2/g)",
+                    "Rating": 16
+                },
+                {
+                    "Name": "BOD 28 (mg O2/g)",
+                    "Rating": 35
+                }
+            ]
+        }
+    }
+]
+
+
+//(7)state of matter web service
+// https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging/GEWater/GEWater_SPG/Product_Info_MatterState_Task?generic_number=25881
+
+var matterResult = [
+    {
+        "FORM": "Liquid"
+    }
+]
+
+//(8)Approvals web service
+// https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging/GEWater/GEWater_SPG/Product_Info_Aprrovals_Task?generic_number=25881
+
+var approvalResult = [
+    {
+        "Approvals": {
+            "label": "Approvals",
+            "particles": [
+                {
+                    "Name": "NSF G5 - Binary",
+                    "Rating": "G5"
+                },
+                {
+                    "Name": "NSF",
+                    "Rating": "Y"
+                },
+                {
+                    "Name": "Kosher",
+                    "Rating": "Y"
+                },
+                {
+                    "Name": "NSF G5 - Binary",
+                    "Rating": "G5"
+                },
+                {
+                    "Name": "NSF",
+                    "Rating": "Y"
+                }
+            ]
+        }
+    }
+]
+
+
+//(9)Container type and status web service
+// this.snapUrl + "/GEWater/GEWater_SPG/SPG_Search_fetchStatus_Task?generic_number="+genericno+"&vkorg="+salesOrg; 
+
+var containerResult = [
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "5026121",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6109373",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6109374",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6109375",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6109377",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6109378",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6109380",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6114451",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": null,
+        "bookmaterialid": null,
+        "hierarchy_id": "600MS6060A",
+        "matnr": "6118834",
+        "pack_name": "ZS: Generic Mat Only",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "SEMI FINISHED GOOD"
+    },
+    {
+        "BOOK_PRICE": "4.56",
+        "bookmaterialid": "7169539",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169539",
+        "pack_name": "D1: 30 Gal Drum",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "4.2",
+        "bookmaterialid": "7169540",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169540",
+        "pack_name": "D3: 55 Gal Drum - Steel",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "7.97",
+        "bookmaterialid": "7169541",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169541",
+        "pack_name": "P2: 5 Gal Pail",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "3",
+        "bookmaterialid": "7169542",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169542",
+        "pack_name": "K: Custom Bulk",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "4.18",
+        "bookmaterialid": "7169543",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169543",
+        "pack_name": "T: Bulk",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "5.91",
+        "bookmaterialid": "7169544",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169544",
+        "pack_name": "E1: 30 Gal AD/SS Entec",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "5.05",
+        "bookmaterialid": "7169545",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169545",
+        "pack_name": "E: Mini Bulk",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "3.65",
+        "bookmaterialid": "7169546",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169546",
+        "pack_name": "NQ: NQ N2 PR VALVE",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "5",
+        "bookmaterialid": "7169547",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169547",
+        "pack_name": "S8: 186 Gal Semi Bulk",
+        "specific_gravity_density": 10.29259,
+        "status": "04",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "4.94",
+        "bookmaterialid": "7169548",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7169548",
+        "pack_name": "S3: 280 Gal Semi Bulk",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "3.34",
+        "bookmaterialid": "7178664",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7178664",
+        "pack_name": "E4: mblk full tote",
+        "specific_gravity_density": 10.29259,
+        "status": "05",
+        "vtext": "GENGARD GN8143"
+    },
+    {
+        "BOOK_PRICE": "4.43",
+        "bookmaterialid": "7185764",
+        "hierarchy_id": "600CL6010F33765141",
+        "matnr": "7185764",
+        "pack_name": "DG: DG Drum 30G-Sys",
+        "specific_gravity_density": 10.29259,
+        "status": "04",
+        "vtext": "GENGARD GN8143"
+    }
+]

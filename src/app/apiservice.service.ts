@@ -1,28 +1,129 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
-import { HttpHeaders,  HttpClient, HttpClientModule } from '@angular/common/http';
+// import { Http, Headers, Response } from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
+// import { Subscription } from 'rxjs';
+// import * as data from './apiServiceResult.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class APIServiceService {
 
-  constructor(private http: Http, 
-              private subscription: Subscription,
-              private httpOptions: HttpHeaders) {
-
+  constructor(
+              // private subscription: Subscription,
+              // private httpOptions: HttpHeaders
+              ) {
+      var url = 'https://elastic.snaplogic.com/api/1/rest/slsched/feed/GEPowerWaterStaging';
   }
 
-  searchAPI(){
-       
-      this.http.get<any>('https://api.npms.io/v2/search?q=scope:angular').subscribe(data => {
-      console.log(data);
-    })
+  ngOnInit(){
+    // console.log(data);
   }
+
+  searchSampleAPI(){
+    //   this.http.get<any>('https://api.npms.io/v2/search?q=scope:angular').subscribe(data => {
+    //   console.log(data);
+    // });
+  };
+
+// //(1) Plastics web service
+// var platicsServiceUrl =  this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Plastics_Task?generic_number=" + genericno; 
+// plasticAPI(){
+//   this.http.get<any>(platicsServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+
+// //(2) search product on product info
+// 			var searchUrl = this.snapUrl + "/GEWater/GEWater_SPG/SPG_PartsSearch_Task?"
+// 					+ "INPUT=%7B%22INPUT_SELECT_PARAM_IN%22%3A%7B%22Request%22%3A%7B%22Header%22%3A%7B%22material_name_makt_maktx%22%3A%22"
+// 					+ "material_name_makt_maktx%22%2C%22material_id_mvke_matnr%22%3A%22%22%2C%22sales_org_id_mvke_vkorg%22%3A%22%22%2C%22"
+// 					+ "name_vtext%22%3A%22%22%2C%22mfg_part_id_mara_mfrpn%22%3A%22%22%2C%22base_uom_name_t006a_mseht%22%3A%22%22%2C%22"
+// 					+ "sales_matl_status_id_mvke_vmsta%22%3A%22%22%2C%22product_prod%22%3A%22%22%2C%22sub_product_sprod%22%3A%22%22%2C%22"
+// 					+ "supplier_supp%22%3A%22%22%2C%22feed_rate_gph%22%3A%22%22%2C%22feed_rate_gpd%22%3A%22%22%2C%22feed_rate_lhr%22%3A%22%22%2C%22"
+// 					+ "sales_matl_status_name_tvmst_vmstb%22%3A%22%22%2C%22package_wt%22%3A%22%22%2C%22unit_of_measure_schme%22%3A%22%22%2C%22"
+// 					+ "min_order_qty_aumng%22%3A%22%22%2C%22SG_Density%22%3A%22%22%2C%22totalPkgWt%22%3A%22%22%2C%22salesUnit%22%3A%22%22%2C%22"
+// 					+ "material_group_id_mara_matkl%22%3A%20%22material_group_id_mara_matkl%22%7D%2C%22ParaValue%22%3A%5B%7B%22"
+// 					+ "PARAM_Maxprespsi%22%3A%22%22%2C%22PARAM_Supplier%22%3A%22%22%2C%22PARAM_SubProd%22%3A%22%22%2C%22PARAM_ChemClass%22%3A%22%22%2C%22"
+// 					+ "PARAM_APPNAME%22%3A%222%22%2C%22PARAM_Prod%22%3A%22%22%2C%22PARAM_SalesOrgPole%22%3A%22ALL%22%2C%22PARAM_Desc%22%3A%22%22%2C%22"
+// 					+ "PARAM_CFO_IND%22%3A%220%22%2C%22PARAM_Maxpresbar%22%3A%22%22%2C%22PARAM_FRgph%22%3A%22%22%2C%22PARAM_SalesOrg%22%3A%22%22%2C%22"
+// 					+ "PARAM_Keyword%22%3A%22%25"
+// 					+ prodName 
+// 					+ "%25%22%2C%22PARAM_FRlhr%22%3A%22%22%2C%22PARAM_FRgpd%22%3A%22%22%2C%22PARAM_MaterialId%22%3A%22%22%7D%5D%7D%7D%7D";
+// searchAPI(){
+//   this.http.get<any>(searchUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+
+// // (3)Corrosion web service
+// var corrosionServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Corrosion_Task?generic_number=" + genericno;
+// corrosionAPI(){
+//   this.http.get<any>(corrosionServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// // (4)Elastomer web service
+// var elasticServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Elastomers_Task?generic_number=" + genericno;
+// elastomerAPI(){
+//   this.http.get<any>(elasticServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// // (5)Containers web service
+// var containerServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Container_Price_Task?matkl="+genericno+"&salesOrg="+salesOrg;
+// containerAPI(){
+//   this.http.get<any>(containerServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// // (6)Physical Properties web service
+// var PhysicalServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Physprop_Task?generic_number=" + genericno;
+// physicalAPI(){
+//   this.http.get<any>(PhysicalServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// // (7)Regulatory web service
+// var regulatoryServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Regulatory_Task?generic_number=" + genericno;
+// regulatoryAPI(){
+//   this.http.get<any>(regulatoryServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// // (8)state of matter web service
+// var matterServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_MatterState_Task?generic_number=" + genericno;
+// matterServiceAPI(){
+//   this.http.get<any>(matterServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// // (9)Approvals web service
+// var approvalServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/Product_Info_Aprrovals_Task?generic_number=" + genericno;
+// approvalServiceAPI(){
+//   this.http.get<any>(approvalServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
+
+// //(11)Container type and status web service
+// var containerServiceUrl = this.snapUrl + "/GEWater/GEWater_SPG/SPG_Search_fetchStatus_Task?generic_number="+genericno+"&vkorg="+salesOrg; 
+// containerWebServiceAPI(){
+//   this.http.get<any>(containerServiceUrl).subscribe(data => {
+//     console.log(data);
+//   });
+// };
 
 
 }

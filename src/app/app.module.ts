@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
+import { APIServiceService } from './apiservice.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchKeywordComponent } from './search-keyword/search-keyword.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { Observable, Subscription } from 'rxjs/Rx';
-// import { HttpClient } from '@angular/common/http';
-
+import { Observable,of, from } from 'rxjs';
+// import { Subscription } from 'rxjs';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import {VirtualScrollerModule} from 'primeng/virtualscroller';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,10 +20,13 @@ import { SearchKeywordComponent } from './search-keyword/search-keyword.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+    // VirtualScrollerModule
   ],
-  providers: [],
-  // providers: [],
+  providers: [APIServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
